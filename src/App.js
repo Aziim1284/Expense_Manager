@@ -29,7 +29,7 @@ const parsedExpenseData = JSON.parse(locastorageData)
 
 const App = () => {
 
-  const [expenses, setExpenses] = useState(parsedExpenseData);
+  const [expenses, setExpenses] = useState(parsedExpenseData ? parsedExpenseData : DUMMY_EXPENSES);
 
   const addExpenseHandler = expense => {
     setExpenses(prevExpenses => {
