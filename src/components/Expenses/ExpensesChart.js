@@ -17,7 +17,7 @@ const ExpensesChart = props => {
     { label: 'Dec', value: 0 },
   ];
 
-  for (const expense of props.expenses) {
+  for (const expense of props?.expenses || []) {
     const date = new Date(expense.date);
 
     if (isNaN(date.getTime())) {

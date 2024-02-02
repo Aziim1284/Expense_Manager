@@ -4,7 +4,7 @@ import "./ExpensesList.css";
 import ExpenseItem from './ExpenseItem.js'
 
 const ExpensesList = (props) => {
-    if (props.items.length === 0) {
+    if (props?.items?.length === 0) {
         return(
             <h2 className="expenses-list__fallback"> Found no expenses.</h2>
         );
@@ -12,7 +12,7 @@ const ExpensesList = (props) => {
     return (
         <li>
         <ul className="expenses-list">
-            {props.items.map((expense) => (
+            {props?.items?.map((expense) => (
             <ExpenseItem
                 key= {expense.id}
                 title={expense.title}

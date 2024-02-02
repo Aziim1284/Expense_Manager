@@ -23,8 +23,6 @@ const Expenses = (props) => {
         expenseDate.getFullYear().toString() === filteredYear
     );
     });
-   const locastorageData = localStorage.getItem("ALLeXpense")
-   const parsedExpenseData = JSON.parse(locastorageData)
     return (
         <div>
             <Card className="expenses">
