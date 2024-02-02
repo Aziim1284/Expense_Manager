@@ -1,48 +1,40 @@
-.LinksClass{
-  display: flex;
-  gap: 20px;
+.App {
+  text-align: center;
+}
+body{
+  cursor: url("../public/cur.png") ,auto;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
-.LinksClass a {
-  text-decoration: none;
-}
-.HomePage a{
-  text-decoration: none;
-}
-.HomePage , .About {
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-top: 100px;
-}
-.HeadTail {
-display: flex;
-gap: 10px;
-justify-content: center;
-align-items: center;
-margin-top: 100px;
-cursor: pointer;
-}
-button{
-  cursor: pointer;
-  height: 27px;
-  width: 100px;
-  background-color: greenyellow;
-  color: crimson;
-  border: none;
-  border-radius: 10px;
-}
-#selectValue{
-  width: 120px;
-  cursor: pointer;
-}
-option{
-  cursor: pointer;
-}
-.itemData{
-  display: flex;
-  gap: 50px;
   justify-content: center;
-  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

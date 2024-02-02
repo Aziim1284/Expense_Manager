@@ -1,23 +1,48 @@
-import './App.css';
-import React from 'react';
-import {BrowserRouter , Routes , Route} from 'react-router-dom'
-// import  CreattingElement from './Components/creattingElement';
-// import Changingstate from './Components/StateChanging/Changingstate';
-import Navbar from './Assignment/Navbar';
-import Home from './Assignment/Home';
-import HeadTail from './Assignment/H&T';
-import About from './Assignment/About';
-function App() {
+import React, { useState } from 'react';
+import "./App.css";
+import NewExpense from "./components/NewExpense/NewExpense";
+import Expenses from "./components/Expenses/Expenses";
+
+const DUMMY_EXPENSES = [
+  {
+    id: "e1",
+    title: "Toilet Paper",
+    amount: 94.12,
+    date: new Date(2020, 7, 14),
+  },
+  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+  {
+    id: "e3",
+    title: "Car Insurance",
+    amount: 294.67,
+    date: new Date(2021, 2, 28),
+  },
+  {
+    id: "e4",
+    title: "New Desk (Wooden)",
+    amount: 450,
+    date: new Date(2021, 5, 12),
+  },
+];
+const locastorageData = localStorage.getItem("ALLeXpense")
+const parsedExpenseData = JSON.parse(locastorageData)
+
+const App = () => {
+
+  const [expenses, setExpenses] = useState(parsedExpenseData);
+
+  const addExpenseHandler = expense => {
+    setExpenses(prevExpenses => {
+      return [expense, ...prevExpenses];
+    });
+  };
+
   return (
-   <BrowserRouter>
-   <Navbar/> 
-    <Routes>
-     <Route  path={'/'} element={<Home/>} />
-     <Route  path={'/about'} element={<About/>} />
-     <Route  path={'/HeadTail'} element={<HeadTail/>} />
-    </Routes>
-   </BrowserRouter>
+    <div>
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items={expenses} />
+    </div>
   );
-}
+};
 
 export default App;
