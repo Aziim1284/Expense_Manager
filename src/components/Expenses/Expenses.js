@@ -24,7 +24,7 @@ const Expenses = (props) => {
     );
     });
     return (
-        <div>
+        <div className='fixed top-8'>
             <Card className="expenses">
                 <ExpensesFilter
                   selected={filteredYear}

@@ -38,7 +38,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className='flex justify-center'>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>

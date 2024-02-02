@@ -52,9 +52,9 @@ const ExpenseForm = (props) => {
   };
 
   return (
-    <div className="m-4 flex flex-col justify-center items-center absolute">
+    <div className="m-4 flex flex-col justify-center items-center absolute inset-0 backdrop-filter backdrop-blur-md">
       <div className=" flex flex-col justify-center items-center shadow-slate-400 shadow-inner py-3 px-3 inset-0 backdrop-filter backdrop-blur-lg">
-        <h1 className="text-center font-bold  py-4 text-2xl text-white">Expense Form</h1>
+        <h1 className="text-center font-bold  py-4 text-2xl ">Add Today's Expenses</h1>
         <div className="new-expense__control ">
           <input
             placeholder="Expense Name"

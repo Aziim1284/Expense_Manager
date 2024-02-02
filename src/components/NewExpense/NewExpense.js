@@ -23,7 +23,7 @@ const NewExpense = (props) => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center z-50">
       {!isEditing && (
         <button
           onClick={startEditingHandler}
